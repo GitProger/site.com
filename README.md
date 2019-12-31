@@ -2,7 +2,7 @@
  Our class's site.
 
 
-### Directorys:
+### Directorys
     index.html, lessons.html in /var/www/html/
     other in /usr/lib/cgi-bin
 ### Server
