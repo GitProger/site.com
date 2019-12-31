@@ -2,11 +2,10 @@
  Our class's site.
 
 
-### Info:
-#### Directorys:
+### Directorys:
     index.html, lessons.html in /var/www/html/
     other in /usr/lib/cgi-bin
-#### Server
+### Server
     Apache2
-#### OS
+### OS
     Ubuntu 16.04
