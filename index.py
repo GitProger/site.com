@@ -20,17 +20,13 @@ def main(argv):
     form = cgi.FieldStorage()
     print("Content-type: text/html")
     print()
-
     text = form.getfirst("post")
-
     post = getfile("base.html")
-
     if text:
-        post += "<pre>" + "_" * 4 + " "
-        post += cur_date() + " " + cur_time() + " " + "_" * 20
-        post += text + "</pre><hr>"
+        post += "_" * 4 + " " + cur_date() + " " + cur_time() + " " + "_" * 20 
+        post += "<pre>" + text + "</pre><hr>"
         putfile("base.html", post)
-
+#    print(getfile("book.html").replace("%s", post, 1))  ## if i will change '{}' to '%s' in book.html
     print(getfile("book.html").format(post))
     return 0
 
