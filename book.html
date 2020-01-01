@@ -2,13 +2,14 @@
 <html>
     <head>
         <title> PTS 2022A Messages </title>
+        <script src="/specsym.js"></script>
     </head>
     <body>
-        {}    <!-- Python's ".format" -->
+        {} <!-- Python's '.format' -->
         <form action="/cgi-bin/index.py" method="POST">
-            <input type="submit"><br>
-            <!--<input type="edit" name="post" size="100">-->
-            <textarea name="post" rows="10" cols="50"></textarea>
+            <input type="submit" onclick="correctForm()">
+            <br>
+            <textarea name="post" rows="10" cols="50" id="user_message"></textarea>
         </form>
     </body>
 </html>
