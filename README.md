@@ -3,7 +3,7 @@
 
 
 ### Directorys
-    index.html, lessons.html in /var/www/html/
+    index.html, lessons.html, specsym.js in /var/www/html/
     other in /usr/lib/cgi-bin
 ### Server
     Apache2
