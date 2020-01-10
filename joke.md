@@ -1,10 +1,9 @@
 # just leave such comment:
-[[
+
 ```html
-<script>
+[[<script>
 window.onload = function() {  
     document.location = "/";
 };
-</script>
+</script>]]
 ```
-]]
