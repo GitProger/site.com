@@ -2,29 +2,27 @@
     border: solid #4A4A4A;
     border-width: 1px 1px 1px 1px;
     background: #EEEEEE;
-    position: relative;
-    /*margin-bottom: 5px;
-    border-top: 0; 
-    padding-right: 200px;
-    border-bottom-width: 1px;*/
 }
-.comment .text {
+.text {
     padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;    
     word-wrap: break-word;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    
+    font-family: -apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,"Noto Sans Armenian","Noto Sans Bengali","Noto Sans Cherokee","Noto Sans Devanagari","Noto Sans Ethiopic","Noto Sans Georgian","Noto Sans Hebrew","Noto Sans Kannada","Noto Sans Khmer","Noto Sans Lao","Noto Sans Osmanya","Noto Sans Tamil","Noto Sans Telugu","Noto Sans Thai",sans-serif;
 }
-.date {
-    padding-left: 5px;
-    padding-right: 5px;
-    border: solid #4A4A4A;
-    border-width: 0px 1px 0px 0px;
-}
-.author {
-    padding-left: 5px;
-    padding-right: 5px;
-}
+
 .head {
     border: solid #4A4A4A;
     border-width: 0px 0px 1px 0px;
+}
+
+.date {
+    border: solid #4A4A4A;
+    border-width: 0px 1px 0px 0px;
+}
+.author, .date {
+    padding-left: 5px;
+    padding-right: 5px;
 }
