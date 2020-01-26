@@ -38,17 +38,20 @@ sub cur_time
 sub main {
     print("Content-type: text/html\n\n");
     my $query = CGI->new;
-    my $text = $query->param("post");
+    my $new = $query->param("post");
     my $post = getfile("base.html");
-    if ($text ne "") {
-        $post .= "_" x 4 . " " . cur_date() . " " . cur_time() . " " . "_" x 20;
-        $post .= "<pre>" . $text . "</pre><hr>";
+    if ($new ne "") {
+        my $temp = getfile("template.html");
+        my $time = cur_date() . " " . cur_time();
+        $temp =~ s/\$DATE\$/$time/;
+        $temp =~ s/\$AUTH\$/anon/;
+        $temp =~ s/\$TEXT\$/$new/;
+        $post .= $temp;
         putfile("base.html", $post);
     }
     my $html = getfile("book.html");
     $html =~ s/{}/$post/;
     print $html;
-    #print(sprintf($html, $post));  ## if i will change '{}' to '%s' in book.html
     return 0;
 }
 exit(main(@ARGV));
