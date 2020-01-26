@@ -23,13 +23,12 @@ def main(argv):
     new = form.getfirst("post")
     post = getfile("base.html")
     if new:
-		temp = getfile("template.html")
+        temp = getfile("template.html")
         temp = temp.replace("$TEXT$", new)
-		temp = temp.replace("$DATE$", cur_date() + " " + cur_time(), 1)
-		temp = temp.replace("$AUTH$", "anon", 1)
-		post += temp
+        temp = temp.replace("$DATE$", cur_date() + " " + cur_time(), 1)
+        temp = temp.replace("$AUTH$", "anon", 1)
+        post += temp
         putfile("base.html", post)
-
     print(getfile("book.html").format(post))
     return 0
 
