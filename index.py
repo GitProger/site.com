@@ -29,7 +29,7 @@ def main(argv):
         temp = temp.replace("$AUTH$", "anon", 1)
         post += temp
         putfile("base.html", post)
-    print(getfile("book.html").format(post))
+    print(getfile("book.html").replace("$BASIC_TEXT$", post))
     return 0
 
 if __name__ == "__main__":
