@@ -50,7 +50,7 @@ sub main {
         putfile("base.html", $post);
     }
     my $html = getfile("book.html");
-    $html =~ s/$\BASIC_TEXT\$/$post/;
+    $html =~ s/\$BASIC_TEXT\$/$post/;
     print $html;
     return 0;
 }
