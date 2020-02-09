@@ -24,8 +24,8 @@ def main(argv):
     post = getfile("base.html")
     if new:
         temp = getfile("template.html")
-        temp = temp.replace("$TEXT$", new)
         temp = temp.replace("$DATE$", cur_date() + " " + cur_time(), 1)
+        temp = temp.replace("$TEXT$", new)
         temp = temp.replace("$AUTH$", "anon", 1)
         post += temp
         putfile("base.html", post)
