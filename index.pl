@@ -44,8 +44,8 @@ sub main {
         my $temp = getfile("template.html");
         my $time = cur_date() . " " . cur_time();
         $temp =~ s/\$DATE\$/$time/;
-        $temp =~ s/\$AUTH\$/anon/;
         $temp =~ s/\$TEXT\$/$new/;
+        $temp =~ s/\$AUTH\$/anon/;
         $post .= $temp;
         putfile("base.html", $post);
     }
