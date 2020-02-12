@@ -30,10 +30,15 @@ sub putfile {
     close($file);
 }
 
-sub cur_date 
-    { return `date +%d.%m.%Y`; }
+sub delsp {
+	my $x = shift;
+	chomp($x);
+	return $x;
+}
+sub cur_date
+    { return delsp `date +%d.%m.%Y`; }
 sub cur_time
-    { return `date +%H:%M`   ; }
+    { return delsp `date +%H:%M`   ; }
 
 sub main {
     print("Content-type: text/html\n\n");
