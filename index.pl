@@ -38,7 +38,7 @@ sub cur_time
 sub main {
     print("Content-type: text/html\n\n");
     my $query = CGI->new;
-    my $new = $query->param("post");
+    my $new = $query->param("post") || "";
     my $post = getfile("base.html");
     if ($new ne "") {
         my $temp = getfile("template.html");
